@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="موقع مصممة الجرافيك فاتن الحموي (هاشتاغ فاتن) - عرض الأعمال والخدمات التصميمية">
+    <title>هاشتاغ فاتن | مصممة جرافيك محترفة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --dark-blue: #181d2c;
+            --deep-purple: #211836;
+            --accent: #7c5cf2;
+            --light: #ffffff;
+            --gray: #f8f9fa;
+            --text: #2d3748;
+            --text-light: #718096;
+            --border: #e2e8f0;
+        }
+
+        body {
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.8;
+            overflow-x: hidden;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+            scroll-margin-top: 100px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--dark-blue);
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            bottom: -20px;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Enhanced Circular Logo Styles - FIXED: Fully circular logo */
+        .logo-circle {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 8px solid white;
+            box-shadow: 0 15px 40px rgba(124, 92, 242, 0.3);
+            position: relative;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-purple) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+        }
+
+        .logo-circle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(124, 92, 242, 0.4);
+        }
+
+        /* FIX: Make logo image fully circular */
+        .logo-circle img {
+            width: 100%; /* Changed from 70% to 100% */
+            height: 100%; /* Changed from 70% to 100% */
+            object-fit: cover; /* Changed from contain to cover */
+            filter: brightness(1.1);
+            border-radius: 50%; /* Added to ensure circular shape */
+        }
+
+        /* Logo Badge for Header */
+        .logo-badge {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-small-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-purple) 100%);
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* FIX: Make small logo image fully circular */
+        .logo-small-circle img {
+            width: 100%; /* Changed from 70% to 100% */
+            height: 100%; /* Changed from 70% to 100% */
+            object-fit: cover; /* Changed from contain to cover */
+            filter: brightness(1.1);
+            border-radius: 50%; /* Added to ensure circular shape */
+        }
+
+        .logo-text {
+            text-align: right;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        /* Logo Icon for Vision Cards */
+        .logo-icon {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 30px;
+            text-align: right;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .logo-icon:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 40px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(24, 29, 44, 0.95);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+            min-height: 44px;
+            min-width: 44px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover:after,
+        nav a.active:after {
+            width: 100%;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-purple) 100%);
+            color: white;
+            padding: 180px 0 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%237c5cf2' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a78bfa, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .hero-text h3 {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: rgba(255,255,255,0.9);
+            font-weight: 400;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(124, 92, 242, 0.3);
+            position: relative;
+            overflow: hidden;
+            min-height: 56px;
+            min-width: 56px;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(124, 92, 242, 0.4);
+            background: #6a4ff5;
+            outline: none;
+        }
+
+        /* Projects */
+        .projects {
+            background: var(--gray);
+            padding: 100px 0;
+        }
+
+        .project-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .tab-btn {
+            background: white;
+            border: 2px solid var(--border);
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            color: var(--text-light);
+            min-height: 48px;
+            min-width: 48px;
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(124, 92, 242, 0.2);
+        }
+
+        .tab-btn:hover:not(.active) {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid var(--border);
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--accent);
+        }
+
+        /* Add this CSS to your existing styles */
+.project-card[data-category="pattern"] .project-category {
+    background: linear-gradient(135deg, #7c5cf2,);
+}
+
+.project-card[data-category="pattern"]:hover {
+    border-color: #7c5cf2;
+}
+
+.project-card[data-category="pattern"] .project-content h3 {
+    color: #000;
+}
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(124, 92, 242, 0.3);
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .project-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .project-tags span {
+            background: var(--gray);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border: 1px solid var(--border);
+        }
+
+        /* Experiences & Achievements Section */
+        .experiences {
+            background: white;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .experiences:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(124, 92, 242, 0.05) 0%, rgba(33, 24, 54, 0.05) 100%);
+            z-index: 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent), #a78bfa);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 48%;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            border: 1px solid var(--border);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 50%;
+            top: 40px;
+            box-shadow: 0 4px 15px rgba(124, 92, 242, 0.3);
+            border: 4px solid white;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content:before {
+            right: -58px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content:before {
+            left: -58px;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), #a78bfa);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(124, 92, 242, 0.2);
+        }
+
+        .timeline-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+
+        /* Vision & Style Section */
+        .vision-style {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-purple) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-style:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .vision-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 50px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .vision-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .vision-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .vision-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text {
+            text-align: right;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--text);
+            margin-bottom: 30px;
+        }
+
+        /* WhatsApp Contact */
+        .whatsapp-contact {
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-purple) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-contact:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2325D366' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .whatsapp-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 30px;
+            padding: 80px 60px;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-icon {
+            font-size: 4rem;
+            color: #25D366;
+            margin-bottom: 30px;
+            text-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .whatsapp-box p {
+            margin-bottom: 40px;
+            opacity: 0.9;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+            position: relative;
+            overflow: hidden;
+            min-height: 60px;
+            min-width: 60px;
+        }
+
+        .whatsapp-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .whatsapp-btn:hover:before {
+            left: 100%;
+        }
+
+        .whatsapp-btn:hover,
+        .whatsapp-btn:focus {
+            background: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%237c5cf2' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-info {
+            text-align: right;
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-direction: row-reverse;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .footer-info p {
+            opacity: 0.8;
+            max-width: 400px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .footer-links h3 {
+            margin-bottom: 25px;
+            color: var(--accent);
+            text-align: right;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            text-align: right;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            display: inline-block;
+            padding: 5px 0;
+        }
+
+        .footer-links a:hover,
+        .footer-links a:focus {
+            color: var(--accent);
+            transform: translateX(-10px);
+            outline: none;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 25px;
+            color: var(--accent);
+            text-align: right;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            text-align: right;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 15px;
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .hero-content {
+                gap: 60px;
+            }
+            
+            .project-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            section {
+                padding: 80px 0;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-text p {
+                margin: 0 auto 40px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .vision-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .timeline:before {
+                right: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                padding-right: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+                margin: 0 !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content:before,
+            .timeline-item:nth-child(even) .timeline-content:before {
+                right: -48px;
+                left: auto;
+            }
+            
+            .footer-logo-container {
+                justify-content: flex-end;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
+            }
+            
+            /* Mobile Menu */
+            .menu-toggle {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: rgba(24, 29, 44, 0.98);
+                backdrop-filter: blur(10px);
+                transition: right 0.3s ease;
+                z-index: 1000;
+                padding: 100px 30px 30px;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.3);
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            nav li {
+                margin-bottom: 15px;
+            }
+            
+            nav a {
+                display: block;
+                padding: 15px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                font-size: 1.2rem;
+            }
+            
+            nav a:last-child {
+                border-bottom: none;
+            }
+            
+            .hero {
+                padding: 140px 0 80px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero-text h3 {
+                font-size: 1.1rem;
+            }
+            
+            .hero-text p {
+                font-size: 1rem;
+            }
+            
+            .project-tabs {
+                gap: 10px;
+            }
+            
+            .tab-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .project-card {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .whatsapp-box {
+                padding: 50px 30px;
+            }
+            
+            .whatsapp-box h2 {
+                font-size: 2rem;
+            }
+            
+            .whatsapp-btn {
+                padding: 16px 40px;
+                font-size: 1.1rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .footer-info {
+                text-align: center;
+            }
+            
+            .footer-logo-container {
+                justify-content: center;
+                flex-direction: column;
+            }
+            
+            .footer-info p {
+                margin: 0 auto;
+            }
+            
+            .footer-links h3,
+            .contact-info h3 {
+                text-align: center;
+            }
+            
+            .footer-links ul {
+                text-align: center;
+            }
+            
+            .footer-links a:hover,
+            .footer-links a:focus {
+                transform: translateY(-5px);
+            }
+            
+            .contact-info li {
+                justify-content: center;
+            }
+            
+            .logo-circle {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.3rem;
+            }
+            
+            .btn, .whatsapp-btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+                width: 100%;
+            }
+            
+            .logo-circle {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .project-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab-btn {
+                width: 200px;
+            }
+            
+            .project-content {
+                padding: 20px;
+            }
+            
+            .vision-card {
+                padding: 30px 20px;
+            }
+            
+            .whatsapp-box {
+                padding: 40px 20px;
+            }
+            
+            .whatsapp-box h2 {
+                font-size: 1.8rem;
+            }
+            
+            .whatsapp-icon {
+                font-size: 3rem;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) {
+            .project-card:hover {
+                transform: none;
+            }
+            
+            .btn:hover, .whatsapp-btn:hover {
+                transform: none;
+            }
+            
+            .vision-card:hover {
+                transform: none;
+            }
+            
+            .footer-links a:hover {
+                transform: none;
+            }
+            
+            .logo-circle:hover {
+                transform: none;
+            }
+        }
+
+        /* Prevent horizontal scroll */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animations */
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        *:focus:not(.focus-visible) {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only">تخطي إلى المحتوى الرئيسي</a>
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo-badge" aria-label="الرئيسية - هاشتاغ فاتن">
+                <div class="logo-text">
+                    <h1>هاشتاغ فاتن</h1>
+                    <span>مصممة جرافيك</span>
+                </div>
+                <div class="logo-small-circle">
+                    <img src="FatenLogo.jpg" alt="شعار هاشتاغ فاتن">
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="قائمة التنقل" aria-expanded="false" aria-controls="mainNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav" aria-label="القائمة الرئيسية">
+                <ul>
+                    <li><a href="#home" class="active">الرئيسية</a></li>
+                    <li><a href="#projects">المشاريع</a></li>
+                    <li><a href="#experience">الخبرات</a></li>
+                    <li><a href="#vision">الرؤية والأسلوب</a></li>
+                    <li><a href="#about">نبذة عني</a></li>
+                    <li><a href="#contact">تواصل معي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>مين هاشتاغ فاتن</h1>
+                        <h2>مصممة جرافيك ومصممة محتوى</h2>
+                        <h3>صاحبة الهوية المهنية هاشتاغ فاتن</h3>
+                        <p>رحلة التصميم عندي بدأت من 2022 بمزيج من الشغف بالفضاء والحب للفن البصري والتعبير الإبداعي</p>
+                        <a href="#projects" class="btn">شاهد أعمالي <i class="fas fa-arrow-down" style="margin-right: 10px;"></i></a>
+                    </div>
+                    <div class="hero-image">
+                        <!-- Enhanced Circular Logo in Hero -->
+                        <div class="logo-circle">
+                            <img src="FatenLogo.jpg" alt="شعار هاشتاغ فاتن - مصممة جرافيك">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">مشاريعي</h2>
+                
+                <div class="project-tabs" role="tablist" aria-label="تصفية المشاريع">
+                    <button class="tab-btn active" data-category="all" role="tab" aria-selected="true">جميع الأعمال</button>
+                    <button class="tab-btn" data-category="brochure" role="tab" aria-selected="false">كاروسيل</button>
+                    <button class="tab-btn" data-category="business-card" role="tab" aria-selected="false">بزنس كارد</button>
+                    <button class="tab-btn" data-category="branding" role="tab" aria-selected="false">سوشيال ميديا</button>
+                    <button class="tab-btn" data-category="pattern" role="tab" aria-selected="false">باترن</button>
+
+                </div>
+
+                <div class="project-grid">
+                    <!-- Brochure Projects -->                    
+                    <div class="project-card" data-category="brochure" role="article">
+                        <div class="project-image">
+                            <img src="كاروسيل 1.jpg" alt="تصميم بانر تعليمي للتصميم الجرافيكي">
+                            <span class="project-category">كاروسيل</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>UNIVERSE</h3>
+                            <div class="project-tags">
+                                <span>تصميم مطبوع</span>
+                                <span>تنسيق صفحات</span>
+                                <span>تعليمي</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="brochure" role="article">
+                        <div class="project-image">
+                            <img src="كاروسيل 2.jpg" alt="تصميم بانر تعليمي للتصميم الجرافيكي">
+                            <span class="project-category">كاروسيل</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>UNIVERSE</h3>
+                            <div class="project-tags">
+                                <span>تصميم مطبوع</span>
+                                <span>تنسيق صفحات</span>
+                                <span>تعليمي</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="brochure" role="article">
+                        <div class="project-image">
+                            <img src="كاروسيل 3.jpg" alt="تصميم بانر تعليمي للتصميم الجرافيكي">
+                            <span class="project-category">كاروسيل</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>UNIVERSE</h3>
+                            <div class="project-tags">
+                                <span>تصميم مطبوع</span>
+                                <span>تنسيق صفحات</span>
+                                <span>تعليمي</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Card Projects -->
+                    <div class="project-card" data-category="business-card" role="article">
+                        <div class="project-image">
+                            <img src="(3).jpeg" alt="تصميم بطاقة عمل وسم - تصميم فاخر وأنيق">
+                            <span class="project-category">بزنس كارد</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>وسم</h3>
+                            <p>تصميم بطاقات عمل فاخرة تعكس الأناقة والفخامة، مصممة بعناية لترك انطباع أولي مميز.</p>
+                            <div class="project-tags">
+                                <span>طباعة</span>
+                                <span>جودة عالية</span>
+                                <span>تصميم فاخر</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="business-card" role="article">
+                        <div class="project-image">
+                            <img src="33.jpeg" alt="تصميم بطاقة عمل وسم - الإصدار الثاني">
+                            <span class="project-category">بزنس كارد</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>وسم - الإصدار الثاني</h3>
+                            <p>تطوير لتصميم بطاقات العمل مع تحسينات في التصميم والألوان لتعزيز الهوية البصرية.</p>
+                            <div class="project-tags">
+                                <span>طباعة</span>
+                                <span>جودة عالية</span>
+                                <span>تطوير تصميم</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card" data-category="business-card" role="article">
+                        <div class="project-image">
+                            <img src="card.jpg" alt="تصميم بطاقة عمل وسم - الإصدار الثاني">
+                            <span class="project-category">بزنس كارد</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>كارد احترافي</h3>
+                            <p>حيث العمارة واسلوب حياة</p>
+                            <div class="project-tags">
+                                <span>طباعة</span>
+                                <span>جودة عالية</span>
+                                <span>تطوير تصميم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Projects -->
+                    <div class="project-card" data-category="branding" role="article">
+                        <div class="project-image">
+                            <img src="4.jpeg" alt="تصميم سوشيال ميديا - WORK HARD DREAM BIG">
+                            <span class="project-category">سوشيال ميديا</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>تصميم سوشيال ميديا</h3>
+                            <p>تصميم محتوى بصري محفز لوسائل التواصل الاجتماعي بعنوان "WORK HARD DREAM BIG".</p>
+                            <div class="project-tags">
+                                <span>تصميم رقمي</span>
+                                <span>وسائل التواصل</span>
+                                <span>محتوى بصري</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="branding" role="article">
+                        <div class="project-image">
+                            <img src="5.jpeg" alt="تصميم سوشيال ميديا محفز - الجزء الثاني">
+                            <span class="project-category">سوشيال ميديا</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>تصميم سوشيال ميديا ٢</h3>
+                            <p>استمرار لسلسلة التصاميم المحفزة لوسائل التواصل الاجتماعي بتركيز على الإبداع والتحفيز.</p>
+                            <div class="project-tags">
+                                <span>تصميم رقمي</span>
+                                <span>وسائل التواصل</span>
+                                <span>تحفيزي</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="branding" role="article">
+                        <div class="project-image">
+                            <img src="تصميم.jpg" alt="تصميم سوشيال ميديا محفز - الجزء الثاني">
+                            <span class="project-category">سوشيال ميديا</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>تصميم سوشيال ميديا</h3>
+                            <p>شانيل</p>
+                            <div class="project-tags">
+                                <span>تصميم رقمي</span>
+                                <span>وسائل التواصل</span>
+                                <span>تحفيزي</span>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Inside the Projects Section, add these pattern project cards to your existing project-grid -->
+
+
+
+
+<div class="project-card" data-category="pattern" role="article">
+    <div class="project-image">
+        <img src="تصميم 1.jpg" alt="تصميم باترن تقني - تصميم رقم 5">
+        <span class="project-category">باترن</span>
+    </div>
+    <div class="project-content">
+        <h3>باترن</h3>
+        <p>تصميم باترن احترافي</p>
+        <div class="project-tags">
+            <span>رائع</span>
+            <span>هندسي دقيق</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="project-card" data-category="pattern" role="article">
+    <div class="project-image">
+        <img src="تصميم 2.jpg" alt="تصميم باترن تقني - تصميم رقم 5">
+        <span class="project-category">باترن</span>
+    </div>
+    <div class="project-content">
+        <h3>باترن</h3>
+        <p>تصميم باترن احترافي</p>
+        <div class="project-tags">
+            <span>رائع</span>
+            <span>هندسي دقيق</span>
+        </div>
+    </div>
+</div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiences & Achievements Section -->
+        <section class="experiences" id="experience">
+            <div class="container">
+                <h2 class="section-title">الخبرات والإنجازات</h2>
+                
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2022 - 2023</span>
+                            <p>طورت مهاراتي منذ مطلع 2022 عبر التعلم الذاتي والتدريب العملي المكثف بين اليوتيوب والورشات المجانية والتدرب على المشاريع الوهمية لاتقان البرامج.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - 2024</span>
+                            <p>الدراسة بمنصة سدم للتصميم الجرافيكي والحصول على شهادتين في مجال التصميم شهادة دورة بوابة التصميم الجرافيكي وشهادة دورة تصميم الشعارات والهويات التجارية.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - 2024</span>
+                            <p>طورت مهاراتي في التسويق الرقمي وحصلت على شهادة في التسويق الرقمي مع شركة البلاسمة.</p>
+                            <p>تدربت على ادارة منصات التواصل وصنع محتوى بصري يحقق الفاعلية.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 - 2025</span>
+                            <p>نفذت دورات تدريبية معتمدة في مكان عملي مما منحني خبرة في التعليم والتعامل مع المتدربين.</p>
+                            <p>اليوم اتحمل ادوارا متعددة : مصممة , مديرة محتوى , ومدربة ناشئة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Style Section -->
+        <section class="vision-style" id="vision">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">رؤيتي وأسلوب التصميم</h2>
+                
+                <div class="vision-grid">
+                    <div class="vision-card" role="article">
+                        <div class="logo-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>الرؤية التصميمية</h3>
+                        <p>انا اؤمن ان لكل تصميم قصته الخاصة وان كل فكرة تستحق ان تحكى بصمت بصري.</p>
+                    </div>
+                    
+                    <div class="vision-card" role="article">
+                        <div class="logo-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>الفلسفة الإبداعية</h3>
+                        <p>ملف اعمالي هو صفحاتي الاولى من مسيرتي التي تعكس بداياتي وخطواتي الاولى والنتائج التي ولدت فرحة بين يدي العميل.</p>
+                    </div>
+                    
+                    <div class="vision-card" role="article">
+                        <div class="logo-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>الأهداف المستقبلية</h3>
+                        <p>اسعى لان اكون جزءا من مشاريع ذات قيمة وافكار مبدعة واهداف كبيرة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">نبذة عني</h2>
+                        <p>خلال سنوات قليلة صنعت لنفسي مسارا مميزا تطور فيه شغفي الى مهارة ومن ثم الى مهنة اعتز بها وها انا اليوم اعمل كمصممة جرافيك ومديرة محتوى ومدربة مبتدئة واستمر في التطور والتعلم كل يوم لان الابداع لا يعرف حدودا.</p>
+                    </div>
+                    <div class="about-image">
+                        <!-- Fixed the image path - using the main logo instead of invalid Telegram blob URL -->
+                        <div class="logo-circle">
+                            <img src="FatenLogo.jpg" alt="هاشتاغ فاتن - مصممة جرافيك محترفة">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Contact Section -->
+        <section class="whatsapp-contact" id="contact">
+            <div class="container">
+                <div class="whatsapp-box">
+                    <i class="fab fa-whatsapp whatsapp-icon" aria-hidden="true"></i>
+                    <h2>لنعمل معًا</h2>
+                    <a href="https://wa.me/message/XOSYL2DBANO7O1" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="راسلني على واتساب - يفتح في نافذة جديدة">
+                        <i class="fab fa-whatsapp"></i> راسلني على واتساب
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo-container">
+                        <div class="logo-small-circle">
+                            <img src="FatenLogo.jpg" alt="شعار هاشتاغ فاتن">
+                        </div>
+                        <div>
+                            <div class="footer-logo">هاشتاغ<span>فاتن</span></div>
+                        </div>
+                    </div>
+                    <p>انا فاتن الحموي
+مصممة جرافيك وصاحبة الهوية المهنية هاشتاغ فاتن</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#projects">المشاريع</a></li>
+                        <li><a href="#experience">الخبرات</a></li>
+                        <li><a href="#vision">الرؤية والأسلوب</a></li>
+                        <li><a href="#about">نبذة عني</a></li>
+                        <li><a href="#contact">تواصل معي</a></li>
+                    </ul>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>معلومات التواصل</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i>hashtagfaten@gmail.com</li>
+                        <li><i class="fas fa-phone"></i>+966 570 273 730</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; CodeCraft 2026 | جميع الحقوق محفوظة
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('active');
+            menuToggle.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                menuToggle.setAttribute('aria-expanded', 'false');
+                
+                // Update active link
+                navLinks.forEach(item => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+
+        // Tab filtering for projects
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button and ARIA states
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                button.classList.add('active');
+                button.setAttribute('aria-selected', 'true');
+                
+                // Filter projects
+                const category = button.getAttribute('data-category');
+                const projects = document.querySelectorAll('.project-card');
+                
+                projects.forEach(project => {
+                    if (category === 'all' || project.getAttribute('data-category') === category) {
+                        project.style.display = 'block';
+                        setTimeout(() => {
+                            project.style.opacity = '1';
+                            project.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        project.style.opacity = '0';
+                        project.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            project.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation observers
+        const createObserver = (selector, options = {}) => {
+            return new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, options);
+        };
+
+        // Initialize observers
+        const timelineObserver = createObserver('.timeline-item', { threshold: 0.1 });
+        const projectObserver = createObserver('.project-card', { threshold: 0.1 });
+        const visionObserver = createObserver('.vision-card', { threshold: 0.1 });
+
+        // Observe elements
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            timelineObserver.observe(item);
+        });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            projectObserver.observe(card);
+        });
+
+        document.querySelectorAll('.vision-card').forEach(card => {
+            visionObserver.observe(card);
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.background = 'rgba(24, 29, 44, 0.98)';
+                header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.2)';
+            } else {
+                header.style.background = 'rgba(24, 29, 44, 0.95)';
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Touch device optimizations
+        if ('ontouchstart' in window) {
+            document.body.classList.add('touch-device');
+        }
+
+        // Image loading animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+                
+                if (img.complete) {
+                    img.style.opacity = '1';
+                } else {
+                    img.addEventListener('load', () => {
+                        img.style.opacity = '1';
+                    });
+                    
+                    // Fallback for error images
+                    img.addEventListener('error', () => {
+                        img.style.opacity = '1';
+                        console.warn('فشل تحميل الصورة:', img.src);
+                    });
+                }
+            });
+        });
+
+        // Keyboard navigation improvements
+        document.addEventListener('keydown', (e) => {
+            // Close menu on Escape
+            if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.focus();
+            }
+            
+            // Tab navigation in mobile menu
+            if (e.key === 'Tab' && mainNav.classList.contains('active')) {
+                const focusableElements = mainNav.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                
+                if (e.shiftKey && document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus();
+                } else if (!e.shiftKey && document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus();
+                }
+            }
+        });
+
+        // Prevent default behavior for empty links
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            link.addEventListener('click', (e) => e.preventDefault());
+        });
+    </script>
+</body>
+</html>
